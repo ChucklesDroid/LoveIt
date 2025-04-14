@@ -5,7 +5,7 @@
 [params]
   # site default theme ["auto", "light", "dark"]
   # 网站默认主题 ["auto", "light", "dark"]
-  defaultTheme = "auto"
+  defaultTheme = "light"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = ""
@@ -19,10 +19,10 @@
   dateFormat = "2006-01-02"
   # website title for Open Graph and Twitter Cards
   # 网站标题, 用于 Open Graph 和 Twitter Cards
-  title = "My cool site"
+  title = "chucklesdroid"
   # website description for RSS, SEO, Open Graph and Twitter Cards
   # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-  description = "This is my cool site"
+  description = "Documenting my travels and tech journey"
   # website images for Open Graph and Twitter Cards
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = []
@@ -30,8 +30,8 @@
   # Author config
   # 作者配置
   [params.author]
-    name = "xxxx"
-    email = ""
+    name = "Aakarsh MJ"
+    email = "mj.akarsh@gmail.com"
     link = ""
 
   # Header config
@@ -51,7 +51,7 @@
       logo = ""
       # title name
       # 标题名称
-      name = "My cool site"
+      name = "ChucklesDroid"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
@@ -60,7 +60,7 @@
       post = ""
       # whether to use typeit animation for title name
       # 是否为标题显示打字机动画
-      typeit = false
+      typeit = true
 
   # Footer config
   # 页面底部信息配置
@@ -80,20 +80,19 @@
     author = true
     # site creation time
     # 网站创立年份
-    since = 2022
+    since = 2025
     # ICP info only in China (HTML format is supported)
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
     # license info (HTML format is supported)
     # 许可协议信息 (支持 HTML 格式)
-    license= ""
-
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
   # Section (all posts) page config
   # Section (所有文章) 页面配置
   [params.section]
     # special amount of posts in each section page
     # section 页面每页显示文章数量
-    paginate = 20
+    paginate = 10
     # date format (month and day)
     # 日期格式 (月和日)
     dateFormat = "01-02"
@@ -119,7 +118,7 @@
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
     # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-    title = "My cool site"
+    title = "ChucklesDroid"
     # whether to omit favicon resource links
     # 是否隐藏网站图标资源链接
     noFavicon = false
@@ -139,16 +138,16 @@
   # Search config
   # 搜索配置
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia"]
     # 搜索引擎的类型 ["lunr", "algolia"]
-    type = "lunr"
+    type = "algolia"
     # max index length of the chunked content
     # 文章内容最长索引长度
     contentLength = 4000
     # placeholder of the search bar
     # 搜索框的占位提示语
-    placeholder = ""
+    placeholder = "travel, food, kde, programming, conferences..."
     # max number of results length
     # 最大结果数目
     maxResultLength = 10
@@ -181,16 +180,16 @@
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = ""
+      avatarURL = "/images/Aakarsh.jpg"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # subtitle shown in home page (HTML format is supported)
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "This is my cool site"
+      subtitle = "Documenting my travels, food recipes, book reviews and tech journey"
       # whether to use typeit animation for subtitle
       # 是否为副标题显示打字机动画
-      typeit = true
+      typeit = false
       # whether to show social links
       # 是否显示社交账号
       social = true
@@ -207,14 +206,17 @@
   # Social config in home page
   # 主页的社交信息设置
   [params.social]
-    GitHub = ""
-    Linkedin = ""
+    Email = "mj.akarsh@gmail.com"
+    Mastodon = "https://floss.social/@aakarshmj"
+    # Gitlab = "https://invent.kde.org/aakarshmj"
+    Linkedin = "https://www.linkedin.com/in/aakarshmj/"
+    GitHub = "https://invent.kde.org/aakarshmj"
+    Matrix = "https://go.kde.org/matrix/#/@aakarshmj:matrix.org"
     X = ""
     Instagram = ""
     Facebook = ""
     Telegram = ""
     Medium = ""
-    Gitlab = ""
     Youtubelegacy = ""
     Youtubecustom = ""
     Youtubechannel = ""
@@ -262,12 +264,10 @@
     Vine = ""
     Googlescholar = ""
     Researchgate = ""
-    Mastodon = ""
     Thingiverse = ""
     Devto = ""
     Gitea = ""
     XMPP = ""
-    Matrix = ""
     Bilibili = ""
     Discord = ""
     DiscordInvite = ""
@@ -285,7 +285,6 @@
     Codeberg = ""
     HuggingFace = ""
     Threads = ""
-    Email = ""
     Phone = ""
     RSS = ""
 
@@ -389,10 +388,11 @@
     # 文章页面的分享信息设置
     [params.page.share]
       enable = true
-      X = true
-      Threads = true
-      Facebook = true
-      Linkedin = false
+      Threads = false
+      Linkedin = true
+      Mastadon = true
+      X = false
+      Facebook = false
       Whatsapp = false
       Pinterest = false
       Tumblr = false
@@ -401,18 +401,18 @@
       VK = false
       Buffer = false
       Xing = false
-      Line = true
+      Line = false
       Instapaper = false
       Pocket = false
       Flipboard = false
-      Weibo = true
+      Weibo = false
       Blogger = false
       Baidu = false
       Odnoklassniki = false
       Evernote = false
       Skype = false
       Trello = false
-      Diaspora = true
+      Diaspora = false
       Mix = false
       Telegram = true
     # Comment config
@@ -635,3 +635,40 @@
     # whether to use object-fit-images to be compatible with older browsers
     # 是否使用 object-fit-images 来兼容旧式浏览器
     objectFit = false
+
+# Menu config
+# 菜单配置
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    # 当您将鼠标悬停在此菜单链接上时, 将显示标题
+    title = ""
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
